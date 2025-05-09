@@ -1,4 +1,5 @@
 import MovieCard from "./MovieCard";
+import Modal from "./Modal";
 import { useEffect, useRef, useState } from "react";
 import "./App.css";
 /**
@@ -23,6 +24,33 @@ export default function MovieList() {
   const [searchTerm, setSearchTerm] = useState("");
   const [mode, setMode] = useState(MODES.NOW_PLAYING);
   const [hasSearched, setHasSearched] = useState(false);
+  const [selectedMovie, setSelectedMovie] = useState(null);
+  const [genres, setGenres] = useState([]);
+
+  useEffect(() => {
+    const url = `https://api.themoviedb.org/3/genre/movie/list?language=en&api_key=${
+      import.meta.env.VITE_API_KEY
+    }`;
+    const options = {
+      method: "GET",
+      headers: {
+        accept: "application/json",
+        Authorization: `Bearer ${import.meta.env.VITE_TMDB_TOKEN}`,
+      },
+    };
+
+    fetch(url, options)
+      .then((res) => res.json())
+      .then((data) => setGenres(data.genres))
+      .catch((err) => console.error(err));
+  }, []);
+
+  function getGenreNames(genreIds) {
+    return genreIds
+      .map((id) => genres.find((g) => g.id === id)?.name)
+      .filter(Boolean)
+      .join(", ");
+  }
 
   function fetchMovies(page) {
     const url = `https://api.themoviedb.org/3/movie/now_playing?api_key=${
@@ -39,16 +67,22 @@ export default function MovieList() {
     fetch(url, options)
       .then((res) => res.json())
       .then((data) => {
-        const existingIds = new Set(movies.map((movie) => movie.id));
-        const newMovies = data.results.filter(
-          (movie) => !existingIds.has(movie.id)
-        );
+        setMovies((prev) => {
+          const existingIds = new Set(prev.map((movie) => movie.id));
+          const newMovies = data.results.filter(
+            (movie) => !existingIds.has(movie.id)
+          );
 
-        if (newMovies.length === 0 || data.results.length === 0) {
-          setHasMoreMovies(false);
-        }
+          if (page === 1) {
+            setHasMoreMovies(true);
+          }
 
-        setMovies((prev) => [...prev, ...newMovies]);
+          if (newMovies.length === 0 || data.results.length === 0) {
+            setHasMoreMovies(false);
+          }
+
+          return [...prev, ...newMovies];
+        });
       })
       .catch((err) => console.error(err));
   }
@@ -116,7 +150,7 @@ export default function MovieList() {
             setPage(1);
             setHasMoreMovies(true);
             fetchedPages.current = new Set();
-            fetchMovies(1);
+            setPage(1);
           }}
         >
           Now Playing
@@ -180,7 +214,9 @@ export default function MovieList() {
       )}
       <div className="movie-list">
         {movies.map((movie) => (
-          <MovieCard key={movie.id} movie={movie} />
+          <div key={movie.id} onClick={() => setSelectedMovie(movie)}>
+            <MovieCard key={movie.id} movie={movie} />
+          </div>
         ))}
       </div>
       <div className="load-more-container">
@@ -194,6 +230,15 @@ export default function MovieList() {
           </div>
         )}
       </div>
+      {selectedMovie && (
+        <Modal
+          movie={{
+            ...selectedMovie,
+            genre: getGenreNames(selectedMovie.genre_ids),
+          }}
+          onClose={() => setSelectedMovie(null)}
+        />
+      )}
     </div>
   );
 }
