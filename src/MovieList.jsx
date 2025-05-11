@@ -12,6 +12,13 @@ const MODES = {
   SEARCH: "search",
 };
 
+const SORT_OPTIONS = {
+  NONE: "",
+  TITLE_ASC: "title-asc",
+  RELEASE_DESC: "release-desc",
+  RATING_DESC: "rating-desc",
+};
+
 export default function MovieList() {
   /**
    * This was used to test the MovieCard component with static data.
@@ -26,6 +33,7 @@ export default function MovieList() {
   const [hasSearched, setHasSearched] = useState(false);
   const [selectedMovie, setSelectedMovie] = useState(null);
   const [genres, setGenres] = useState([]);
+  const [sortOption, setSortOption] = useState(SORT_OPTIONS.NONE);
 
   useEffect(() => {
     const url = `https://api.themoviedb.org/3/genre/movie/list?language=en&api_key=${
@@ -139,6 +147,27 @@ export default function MovieList() {
       .catch((err) => console.error(err));
   }
 
+  function handleSortChange(newSortOption) {
+    setSortOption(newSortOption);
+    if (newSortOption === SORT_OPTIONS.NONE) return;
+
+    setMovies((prevMovies) => {
+      let sortedMovies = [...prevMovies];
+
+      if (newSortOption === SORT_OPTIONS.TITLE_ASC) {
+        sortedMovies.sort((a, b) => a.title.localeCompare(b.title));
+      } else if (newSortOption === SORT_OPTIONS.RELEASE_DESC) {
+        sortedMovies.sort(
+          (a, b) => new Date(b.release_date) - new Date(a.release_date)
+        );
+      } else if (newSortOption === SORT_OPTIONS.RATING_DESC) {
+        sortedMovies.sort((a, b) => b.vote_average - a.vote_average);
+      }
+
+      return sortedMovies;
+    });
+  }
+
   return (
     <div className="movie-list-container">
       <div className="view-toggle-container">
@@ -212,6 +241,23 @@ export default function MovieList() {
           </button>
         </div>
       )}
+      <div className="sort-dropdown-container">
+        <label htmlFor="sort">Sort by: </label>
+        <select
+          id="sort"
+          value={sortOption}
+          onChange={(e) => handleSortChange(e.target.value)}
+        >
+          <option value={SORT_OPTIONS.NONE}>None</option>
+          <option value={SORT_OPTIONS.TITLE_ASC}>Title (A-Z)</option>
+          <option value={SORT_OPTIONS.RELEASE_DESC}>
+            Release Date (Newest to Oldest)
+          </option>
+          <option value={SORT_OPTIONS.RATING_DESC}>
+            Rating (Highest to Lowest)
+          </option>
+        </select>
+      </div>
       <div className="movie-list">
         {movies.map((movie) => (
           <div key={movie.id} onClick={() => setSelectedMovie(movie)}>
