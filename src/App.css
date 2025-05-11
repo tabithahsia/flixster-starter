@@ -98,3 +98,11 @@
   height: auto;
   border-radius: 4px;
 }
+
+header,
+footer {
+  background-color: purple;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
