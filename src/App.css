@@ -34,10 +34,9 @@
   padding: 1rem;
 }
 
-/* Cap at 5 columns on large screens */
 @media (min-width: 1200px) {
   .movie-list {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 
