@@ -38,7 +38,7 @@ Deployed Application (**required**): [Flixster Deployed Site](https://flixster-s
     - [x] Clicks the Submit/Search button
   - [x] Users can click the Clear button. When clicked:
     - [x] Most recent search results are cleared from the text input field and the grid view and all current movies are displayed in a grid view
-- [ ] **Design Features**
+- [x] **Design Features**
   - [x] Website implements all of the following accessibility features:
     - [x] Semantic HTML
     - [x] [Color contrast](https://webaim.org/resources/contrastchecker/)
@@ -62,7 +62,7 @@ Deployed Application (**required**): [Flixster Deployed Site](https://flixster-s
       - [x] Release date (chronologically, most recent to oldest)
       - [x] Rating (descending, highest to lowest)
     - [x] When a sort option is clicked, movies display in a grid according to selected criterion.
-  - [ ] Website displays:
+  - [x] Website displays:
     - [x] Header section
     - [x] Banner section
     - [x] Search bar
@@ -70,10 +70,10 @@ Deployed Application (**required**): [Flixster Deployed Site](https://flixster-s
     - [x] About section
     - [x] Contact section
     - [x] Footer section
-    - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: To ease the grading process, please use the [color contrast checker](https://webaim.org/resources/contrastchecker/) to demonstrate to the grading team that text and background colors on your website have appropriate contrast. The Contrast Ratio should be above 4.5:1 and should have a green box surrounding it.
+    - [x] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: To ease the grading process, please use the [color contrast checker](https://webaim.org/resources/contrastchecker/) to demonstrate to the grading team that text and background colors on your website have appropriate contrast. The Contrast Ratio should be above 4.5:1 and should have a green box surrounding it.
   - [x] **Deployment**
   - [x] Website is deployed via Render.
-  - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: For ease of grading, please use the deployed version of your website when creating your walkthrough.
+  - [x] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: For ease of grading, please use the deployed version of your website when creating your walkthrough.
 
 #### STRETCH FEATURES
 
@@ -110,23 +110,21 @@ Deployed Application (**required**): [Flixster Deployed Site](https://flixster-s
 
 ### Walkthrough Video
 
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video or gif actually renders and animates when viewing this README. Ensure your walkthrough showcases the presence and/or functionality of all features you implemented above (check them off as you film!). Pay attention to any **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS** checkboxes listed above to ensure graders see the full functionality of your website! (🚫 Remove this paragraph after adding walkthrough video)
-
-`ADD_EMBEDDED_CODE_HERE`
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/3ec0913061564f59b4dffa9035aa460b?sid=137cf4dd-f6dc-4501-b88b-fc94bcbbbaa0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 ### Reflection
 
 - Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Add your response here
+I did not do any of the labs :(
 
 - If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
 
-Add your response here
+I probably have some redundant code that could be made more efficient.
 
 - Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+I didn't have a project demo
 
 ### Open-source libraries used
 
@@ -135,3 +133,5 @@ Add your response here
 ### Shout out
 
 Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+
+Thanks to my amazing instructional team for being so supportive! :)
