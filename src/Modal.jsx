@@ -7,7 +7,7 @@ export default function Modal({ movie, onClose }) {
       <div className="modal-content">
         <h2>{movie.title}</h2>
         <img
-          src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+          src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
           alt={movie.title}
         />
         <p>
@@ -19,6 +19,11 @@ export default function Modal({ movie, onClose }) {
         <p>
           <strong>Genre: </strong> {movie.genre}
         </p>
+        {movie.runtime && (
+          <p>
+            <strong>Runtime: </strong> {movie.runtime} minutes
+          </p>
+        )}
         <button className="close-button" onClick={onClose}>
           Close
         </button>
@@ -29,11 +34,12 @@ export default function Modal({ movie, onClose }) {
 
 Modal.propTypes = {
   movie: PropTypes.shape({
-    poster_path: PropTypes.string.isRequired,
+    backdrop_path: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     release_date: PropTypes.string.isRequired,
     overview: PropTypes.string.isRequired,
     genre: PropTypes.string.isRequired,
+    runtime: PropTypes.number,
   }).isRequired,
   onClose: PropTypes.func.isRequired,
 };

@@ -168,6 +168,21 @@ export default function MovieList() {
     });
   }
 
+  function fetchMovieDetails(movieId) {
+    const url = `https://api.themoviedb.org/3/movie/${movieId}?language=en-US&api_key=${
+      import.meta.env.VITE_API_KEY
+    }`;
+    const options = {
+      method: "GET",
+      headers: {
+        accept: "application/json",
+        Authorization: `Bearer ${import.meta.env.VITE_TMDB_TOKEN}`,
+      },
+    };
+
+    return fetch(url, options).then((res) => res.json());
+  }
+
   return (
     <div className="movie-list-container">
       <div className="view-toggle-container">
@@ -264,7 +279,14 @@ export default function MovieList() {
       </div>
       <div className="movie-list">
         {movies.map((movie) => (
-          <div key={movie.id} onClick={() => setSelectedMovie(movie)}>
+          <div
+            key={movie.id}
+            onClick={() => {
+              fetchMovieDetails(movie.id).then((details) => {
+                setSelectedMovie({ ...movie, runtime: details.runtime });
+              });
+            }}
+          >
             <MovieCard key={movie.id} movie={movie} />
           </div>
         ))}
