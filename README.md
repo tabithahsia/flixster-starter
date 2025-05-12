@@ -13,9 +13,9 @@ Currently, two official plugins are available:
 
 Submitted by: Tabitha Hsia
 
-Estimated time spent: **#** hours spent in total
+Estimated time spent: **Too Many** hours spent in total
 
-Deployed Application (**required**): [Flixster Deployed Site](ADD_LINK_HERE)
+Deployed Application (**required**): [Flixster Deployed Site](https://flixster-starter-cp29.onrender.com/)
 
 ### Application Features
 

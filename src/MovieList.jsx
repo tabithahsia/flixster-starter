@@ -232,15 +232,19 @@ export default function MovieList() {
             onClick={() => {
               setSearchTerm("");
               setMovies([]);
+              setMode(MODES.NOW_PLAYING);
               setPage(1);
-              setHasMoreMovies(false);
-              setHasSearched(false);
+              setHasMoreMovies(true);
+              fetchedPages.current = new Set();
             }}
           >
             Clear
           </button>
         </div>
       )}
+      <h2>
+        {mode === MODES.NOW_PLAYING ? "Now Playing Movies" : "Search Results"}
+      </h2>
       <div className="sort-dropdown-container">
         <label htmlFor="sort">Sort by: </label>
         <select
