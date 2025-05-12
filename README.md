@@ -7,8 +7,6 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-📝 `NOTE` Use this template to initialize the contents of a README.md file for your application. As you work on your assignment over the course of the week, update the required or stretch features lists to indicate which features you have completed by changing `[ ]` to `[x]`. (🚫 Remove this paragraph before submitting your assignment.)
-
 ## Unit Assignment: Flixster
 
 Submitted by: Tabitha Hsia
@@ -41,9 +39,9 @@ Deployed Application (**required**): [Flixster Deployed Site](https://flixster-s
   - [x] Users can click the Clear button. When clicked:
     - [x] Most recent search results are cleared from the text input field and the grid view and all current movies are displayed in a grid view
 - [ ] **Design Features**
-  - [ ] Website implements all of the following accessibility features:
+  - [x] Website implements all of the following accessibility features:
     - [x] Semantic HTML
-    - [ ] [Color contrast](https://webaim.org/resources/contrastchecker/)
+    - [x] [Color contrast](https://webaim.org/resources/contrastchecker/)
     - [x] Alt text for images
   - [x] Website implements responsive web design.
     - [x] Uses CSS Flexbox or CSS Grid
