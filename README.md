@@ -110,7 +110,14 @@ Deployed Application (**required**): [Flixster Deployed Site](https://flixster-s
 
 ### Walkthrough Video
 
-`<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/3ec0913061564f59b4dffa9035aa460b?sid=137cf4dd-f6dc-4501-b88b-fc94bcbbbaa0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>`
+<div>
+    <a href="https://www.loom.com/share/3ec0913061564f59b4dffa9035aa460b">
+      <p>Flixster App Features Overview 🎬 - Watch Video</p>
+    </a>
+    <a href="https://www.loom.com/share/3ec0913061564f59b4dffa9035aa460b">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/3ec0913061564f59b4dffa9035aa460b-94956a085851a651-full-play.gif">
+    </a>
+  </div>
 
 ### Reflection
 
