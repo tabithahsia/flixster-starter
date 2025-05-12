@@ -29,9 +29,9 @@ Deployed Application (**required**): [Flixster Deployed Site](https://flixster-s
     - [x] Poster image
     - [x] Votes
   - [x] Users can load more current movies by clicking a button at the bottom of the list, which automatically updates page with new movies (no reloading by clicking the browser's refresh button).
-- [ ] **Search Functionality**
+- [x] **Search Functionality**
   - [x] Users can use a search bar to search for movies by title.
-  - [ ] The search bar should include:
+  - [x] The search bar should include:
     - [x] Text input field
     - [x] Submit/Search button
     - [x] Clear button
@@ -42,39 +42,39 @@ Deployed Application (**required**): [Flixster Deployed Site](https://flixster-s
     - [x] Most recent search results are cleared from the text input field and the grid view and all current movies are displayed in a grid view
 - [ ] **Design Features**
   - [ ] Website implements all of the following accessibility features:
-    - [ ] Semantic HTML
+    - [x] Semantic HTML
     - [ ] [Color contrast](https://webaim.org/resources/contrastchecker/)
-    - [ ] Alt text for images
-  - [ ] Website implements responsive web design.
-    - [ ] Uses CSS Flexbox or CSS Grid
-    - [ ] Movie tiles and images shrink/grow in response to window size
-  - [ ] Users can click on a movie tile to view more details about a movie in a pop-up modal.
-    - [ ] The pop-up window is centered in the screen and does not occupy the entire screen.
-    - [ ] The pop-up window has a shadow to show that it is a pop-up and appears floating on the screen.
-    - [ ] The backdrop of the pop-up appears darker or in a different shade than before. including:
-    - [ ] The pop-up displays additional details about the moving including:
-      - [ ] Runtime in minutes
-      - [ ] Backdrop poster
-      - [ ] Release date
-      - [ ] Genres
-      - [ ] An overview
-  - [ ] Users can use a drop-down menu to sort movies.
-    - [ ] Drop-down allows movies to be sorted by:
-      - [ ] Title (alphabetic, A-Z)
-      - [ ] Release date (chronologically, most recent to oldest)
-      - [ ] Rating (descending, highest to lowest)
-    - [ ] When a sort option is clicked, movies display in a grid according to selected criterion.
+    - [x] Alt text for images
+  - [x] Website implements responsive web design.
+    - [x] Uses CSS Flexbox or CSS Grid
+    - [x] Movie tiles and images shrink/grow in response to window size
+  - [x] Users can click on a movie tile to view more details about a movie in a pop-up modal.
+    - [x] The pop-up window is centered in the screen and does not occupy the entire screen.
+    - [x] The pop-up window has a shadow to show that it is a pop-up and appears floating on the screen.
+    - [x] The backdrop of the pop-up appears darker or in a different shade than before.
+    - [x] The pop-up displays additional details about the moving including:
+      - [x] Runtime in minutes
+      - [x] Backdrop poster
+      - [x] Release date
+      - [x] Genres
+      - [x] An overview
+  - [x] Users can use a drop-down menu to sort movies.
+    - [x] Drop-down allows movies to be sorted by:
+      - [x] Title (alphabetic, A-Z)
+      - [x] Release date (chronologically, most recent to oldest)
+      - [x] Rating (descending, highest to lowest)
+    - [x] When a sort option is clicked, movies display in a grid according to selected criterion.
   - [ ] Website displays:
-    - [ ] Header section
-    - [ ] Banner section
-    - [ ] Search bar
-    - [ ] Movie grid
-    - [ ] About section
-    - [ ] Contact section
-    - [ ] Footer section
+    - [x] Header section
+    - [x] Banner section
+    - [x] Search bar
+    - [x] Movie grid
+    - [x] About section
+    - [x] Contact section
+    - [x] Footer section
     - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: To ease the grading process, please use the [color contrast checker](https://webaim.org/resources/contrastchecker/) to demonstrate to the grading team that text and background colors on your website have appropriate contrast. The Contrast Ratio should be above 4.5:1 and should have a green box surrounding it.
-  - [ ] **Deployment**
-  - [ ] Website is deployed via Render.
+  - [x] **Deployment**
+  - [x] Website is deployed via Render.
   - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: For ease of grading, please use the deployed version of your website when creating your walkthrough.
 
 #### STRETCH FEATURES
